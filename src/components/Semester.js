@@ -8,7 +8,7 @@ import Radio from '@mui/material/Radio';
 import {DataGrid} from '@mui/x-data-grid';
 import {SEMESTER_LIST} from '../constants.js'
 
-// user selects from a list of  (year, semester) values
+// user selects from a list of (year, semester) values
 class Semester extends Component {
     constructor(props) {
       super(props);
@@ -61,6 +61,11 @@ class Semester extends Component {
                       semester:SEMESTER_LIST[this.state.selected].name}} 
                 variant="outlined" color="primary" style={{margin: 10}}>
                 Get Schedule
+              </Button>
+              <Button name = "addStudentButton" component={Link}
+                  to={{pathname:'/addStudent'}}
+              variant = "contained" color="primary" style = {{backgroundColor: 'green', margin:10}}>
+              Add Student
               </Button>
           </div>
       </div>
